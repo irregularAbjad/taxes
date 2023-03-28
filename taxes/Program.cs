@@ -64,9 +64,9 @@
                     {
                         int po = percentof;
                         percentof = income >= bracketsMarried[i, 0] && income > 22000 ? bracketsMarried[i, 1] : percentof;
-                        switch (po == percentof)
+                        if (po == percentof)
                         {
-                            case true: break;
+                            break;
                         }
                     }
                     break;
