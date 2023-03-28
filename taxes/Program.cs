@@ -6,6 +6,7 @@
         {
             Final();
         }
+
         public static void Final()
         {
             double[] answers = Questionare();
@@ -74,6 +75,7 @@
             double total = income * percent;
             Console.WriteLine($"You owe {total} at {percentof}%.");
         }
+
         public static double Itemized(double[] inp)
         {
             double ans = (float)inp[1] * 0.075;
@@ -88,22 +90,23 @@
             ans += inp[5] < 239230 && inp[4] < 15950 ? inp[4] : 0;
             return ans;
         }
+
         public static double[] Questionare()
         {
             double[] answers = new double[5];
             Console.WriteLine("When you type a number in this entire program, do not add '$' before or any commas in the middle.\n");
             Console.WriteLine("Are you filing on your own or with your spouse? (0 = alone,1 = married)");
-            answers[0] = (int.Parse(Console.ReadLine()));
+            answers[0] = int.Parse(Console.ReadLine());
             Console.WriteLine("Do you have any medical expenses? (yes enter amount; no type 0)");
-            answers[1] = (int.Parse(Console.ReadLine()));
+            answers[1] = int.Parse(Console.ReadLine());
             Console.WriteLine("Do you have any un-compensated damages from federal disasters? (yes enter amount; no type 0)");
-            answers[2] = (int.Parse(Console.ReadLine()));
+            answers[2] = int.Parse(Console.ReadLine());
             Console.WriteLine("Do you have any student loan debt? (yes type amount; no type 0)");
-            answers[3] = (int.Parse(Console.ReadLine()));
+            answers[3] = int.Parse(Console.ReadLine());
             Console.WriteLine("Did you adopt a child this year? (if yes type the amount of all expenses you had to pay; no type 0)");
-            answers[4] = (int.Parse(Console.ReadLine()));
+            answers[4] = int.Parse(Console.ReadLine());
             Console.WriteLine("How much do you make? (type amount)");
-            answers[5] = (int.Parse(Console.ReadLine()));
+            answers[5] = int.Parse(Console.ReadLine());
             return (answers);
         }
     }
